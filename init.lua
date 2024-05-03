@@ -21,7 +21,7 @@ vim.cmd(":set relativenumber")
 --desert	A desert-inspired colorscheme
 --elflord	A fantasy-themed colorscheme
 --evening	A colorscheme with a calming evening vibe
---habamax	A colorscheme with warm hues
+--habamax	A colorscheme with warm hues(++)
 --industry	A colorscheme with an industrial look(++)
 --koehler	A professional-looking colorscheme
 --Lunaperche	A unique and visually pleasing colorscheme
@@ -35,8 +35,8 @@ vim.cmd(":set relativenumber")
 --slate	A colorscheme with shades of slate
 --torte	A rich and chocolatey colorscheme(+)
 --zellner	A unique and eye-catching colorscheme(--)
---vim.cmd("colorscheme pablo")
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme habamax")
+--vim.cmd("colorscheme tokyonight-night")
 --vim.cmd[[colorscheme solarized-osaka]]
 --Disabling swap file system
 vim.cmd(":set noswapfile")
@@ -72,6 +72,21 @@ require('lualine').setup {
   }
 }
 
+--cmp
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<C-Space>'] = cmp.mapping.complete(),
+  },
+
+  -- You should specify your *installed* sources.
+  sources = {
+    { name = 'buffer' },
+    { name = 'nvim_lsp' },
+    { name = 'ultisnips' },
+  },
+})
 --Importing mappings
 require 'mappings'
 
