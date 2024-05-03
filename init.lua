@@ -5,6 +5,8 @@ vim.g.loaded_netrwPlugin = 1
 --Importing plugins
 require('plugins')
 
+--Importing asciiart
+require 'asciidash'
 
 --Linenumber
 --set relativenumber for relative
@@ -33,8 +35,8 @@ vim.cmd(":set relativenumber")
 --slate	A colorscheme with shades of slate
 --torte	A rich and chocolatey colorscheme(+)
 --zellner	A unique and eye-catching colorscheme(--)
-vim.cmd("colorscheme industry")
---vim.cmd("colorscheme tokyonight-night")
+--vim.cmd("colorscheme pablo")
+vim.cmd("colorscheme tokyonight-night")
 --vim.cmd[[colorscheme solarized-osaka]]
 --Disabling swap file system
 vim.cmd(":set noswapfile")
@@ -69,57 +71,7 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
--- Function to print ASCII art as custom dashboard header
-local function custom_header()
-    local header = {
 
-        "                                         _____ _                 _                                 ",    
-        "                                        / ____(_)               | |                                ",
-        "                                       | (___  _ ___ _   _ _ __ | |__  _   _ ___                   ",
-        "                                        ___  \\| / __| | | | '_ \\| '_ \\| | | / __|                ",
-        "                                        ____) | __\\ |_| | |_) | | | | |_| \\__ \\                  ",
-        "                                       |_____/|_|___/__, | .__/|_| |_|\\__,_|___/                  ",
-        "                                                      __/ | |                                      ",
-        "                                                     |___/|_|                                       ", 	   "                                                                                                    ",
-        "                                                      █    _  ",
-        "                                                       █  /_\\  ",
-        "                                                        █ \\_/     ",
-        "                                                         █  \\\\0   ",
-        "                                                          █   |    ",
-        "                                                           █ / |   ",
-        "                                                            █      ",
-        "                                                             █     ",
-        "                                                              █    ",
-        "                                                               █   ",
-        "                                                                █  ",
-        "                                                                 █ ",
-        "                                                         Keep rolling...",
-        "                                                                          ",
-        "                                                                          ",
-        "                                🔨Enter     🪬C-n for sidebar      ⟺ Tab to change tabs  ",
-        "                                                                   ",
-        "                                                                   ",
-        "                                                                   ",
-        "                                                                   ",
-        "                                                                   ",
-    }
-    for _, line in ipairs(header) do
-     print(line)
-  end
-end
+--Importing mappings
+require 'mappings'
 
--- Set custom header function for dashboard
-vim.g.dashboard_custom_header = custom_header()
---Keymapping
-local map = vim.keymap.set
---For navigation
-map("i", "<C-l>", "<Right>", { desc = "Move Right" })
-map("i", "<C-j>", "<Down>", { desc = "Move Down" })
-map("i", "<C-k>", "<Up>", { desc = "Move Up" })
-map("i", "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" })
-map("i", "<C-h>", "<Left>", { desc = "Move Left" })
---For Tabchange
-map("n","<Tab>",'<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
-map("n", "<C-n>", '<Cmd>NvimTreeOpen<CR>',opts)
-map("n", "<C-c>", '<Cmd>NvimTreeClose<CR>',opts)
