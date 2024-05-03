@@ -4,8 +4,8 @@ A minimal nvim config drawn inspiration of Greek Mythical creature Sisyphus, who
 # Motivation
 It is a reminder for pursuit of refining our tools, knowing that perfection is unattainable yet striving for improvement nonetheless. This Neovim configuration embracesthe ethos of embracing the absurdity of our efforts while finding meaning in the process.
 
-#Dashboard
-![Dash](https://github.com/Aashish69-96/Sisyphus/blob/main/images/dash2.png)
+# Dashboard
+![Dash](https://github.com/Aashish1-1-1/Sisyphus/blob/main/image/dash2.png)
 
 ---
 Keep rolling the boulder, for it is in the struggle itself that we find purpose.
