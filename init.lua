@@ -40,7 +40,6 @@ vim.cmd("colorscheme habamax")
 --vim.cmd[[colorscheme solarized-osaka]]
 --Disabling swap file system
 vim.cmd(":set noswapfile")
-
 --Closingtheopening
 require("autoclose").setup()
 
@@ -71,6 +70,9 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
+--Split to below and right
+vim.cmd(":set splitright")
+vim.cmd(":set splitbelow")
 
 --cmp
 local cmp = require('cmp')
