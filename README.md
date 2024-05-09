@@ -9,3 +9,6 @@ It is a reminder for pursuit of refining our tools, knowing that perfection is u
 
 ---
 Keep rolling the boulder, for it is in the struggle itself that we find purpose.
+
+---
+![ASCII](https://texteditor.com/multiline-text-art/)
