@@ -5,7 +5,7 @@ A minimal nvim config drawn inspiration of Greek Mythical creature Sisyphus, who
 It is a reminder for pursuit of refining our tools, knowing that perfection is unattainable yet striving for improvement nonetheless. This Neovim configuration embracesthe ethos of embracing the absurdity of our efforts while finding meaning in the process.
 
 # Dashboard
-![Dash](https://github.com/Aashish1-1-1/Sisyphus/blob/main/image/dash2.png)
+![Dash](./image/dash.png)
 
 ---
 Keep rolling the boulder, for it is in the struggle itself that we find purpose.
@@ -25,6 +25,6 @@ Keep rolling the boulder, for it is in the struggle itself that we find purpose.
 
 # To Try
 ```bash 
-git clone https://github.com/Aashish1-1-1/Sisyphus 
-mv Sisyphus ~/.config/nvim
+mv ~/.config/nvim ~/.config/nvim_backup
+git clone https://github.com/Aashish1-1-1/Sisyphus  ~/.config/nvim
 ```
