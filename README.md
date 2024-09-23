@@ -12,3 +12,19 @@ Keep rolling the boulder, for it is in the struggle itself that we find purpose.
 
 ---
 [ASCII](https://texteditor.com/multiline-text-art/)
+
+# Used plugins
+- Autoparis
+- barbar
+- cmp
+- lualine
+- telescope
+- toggleterm
+- treesitter
+- lsp
+
+# To Try
+```bash 
+git clone https://github.com/Aashish1-1-1/Sisyphus 
+mv Sisyphus ~/.config/nvim
+```

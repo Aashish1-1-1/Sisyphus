@@ -10,6 +10,13 @@ map("i", "<C-h>", "<Left>", { desc = "Move Left" })
 --For Tabchange
 map("n","<Tab>",'<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+--Tree file
 map("n", "<C-n>", '<Cmd>Neotree toggle<CR>',opts)
 map("n", "<C-c>", '<Cmd>Neotree focus<CR>',opts)
-map("n", "<A-h>", '<Cmd>ToggleTerm size=5 <CR>',opts)
+--Terminal toggle
+map({"n","t"}, "<A-h>", '<Cmd>ToggleTerm size=15 direction=horizontal <CR>',opts)
+map({"n","t"}, "<A-i>", '<Cmd>ToggleTerm size=5 direction=float <CR>',opts)
+
+--Telescope
+map({"n","i"},"<C-s>", '<Cmd>Telescope find_file<CR>',opts)
+map({"n","i"},"<C-f>", '<Cmd>Telescope grep_string<CR>',opts)
