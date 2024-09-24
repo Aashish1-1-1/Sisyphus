@@ -20,3 +20,10 @@ map({"n","t"}, "<A-i>", '<Cmd>ToggleTerm size=5 direction=float <CR>',opts)
 --Telescope
 map({"n","i"},"<C-s>", '<Cmd>Telescope find_files <CR>',opts)
 map({"n","i"},"<C-f>", '<Cmd>Telescope grep_string<CR>',opts)
+
+--Select all
+map({"n","i"},"<C-a>",'ggVG')
+
+--Leetcode
+map({"n","i"},"<C-'>", '<Cmd>Leet run<CR>',opts)
+map({"n","i"},"<C-CR>", '<Cmd>Leet submit<CR>',opts)
