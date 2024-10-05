@@ -1,35 +1,37 @@
 return {
-    "williamboman/mason.nvim",
-    dependencies = {
-        "williamboman/mason-lspconfig.nvim",
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
-    config = function()
-        require("mason").setup()
+	{
+		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+		},
+		config = function()
+			require("mason").setup()
 
-        require("mason-lspconfig").setup({
-            automatic_installation = true,
-            ensure_installed = {
-                "cssls",
-                "eslint",
-                "html",
-                "jsonls",
-                "tsserver",
-                "pyright",
-                "tailwindcss",
-            },
-        })
+			require("mason-lspconfig").setup({
+				automatic_installation = true, -- Automatically install LSP servers
+				ensure_installed = {
+					"cssls", -- CSS LSP
+					"eslint", -- ESLint LSP
+					"html", -- HTML LSP
+					"jsonls", -- JSON LSP
+					"pyright", -- Python LSP
+					"tailwindcss", -- Tailwind CSS LSP
+					"rust_analyzer", -- rust-analyzer
+					"gopls", --golang
+				},
+			})
 
-        require("mason-tool-installer").setup({
-            ensure_installed = {
-                "prettier",
-                "stylua", -- lua formatter
-                "isort", -- python formatter
-                "black", -- python formatter
-                "pylint",
-                "eslint_d",
-            },
-        })
-    end,
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"prettier", -- Code formatter for JS, HTML, CSS, etc.
+					"stylua", -- Lua formatter
+					"isort", -- Python import formatter
+					"black", -- Python code formatter
+					"pylint", -- Python linter
+					"eslint_d", -- ESLint daemon for linting JavaScript/TypeScript
+				},
+			})
+		end,
+	},
 }
-

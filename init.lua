@@ -2,11 +2,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require('Aashish.settings')
+require("Aashish.settings")
 --Importing asciiart
-require('Aashish.asciidash')
+require("Aashish.asciidash")
 --Lazy
-require('Aashish.lazy')
+require("Aashish.lazy")
 --Setting theme
 --Colorscheme	Description
 --blue	A colorscheme with shades of blue
@@ -23,18 +23,17 @@ require('Aashish.lazy')
 --morning	A colorscheme that represents the morning
 --murphy	A clean and minimalist colorscheme
 --pablo	A vibrant colorscheme(++)
---peachpuff	A soft and warm colorscheme
+--peachpuff	A soft and warm colorscheme(gay)
 --quiet	A subdued and relaxing colorscheme
 --ron	A balanced and harmonious colorscheme
 --shine	A shiny and glossy colorscheme(--)
 --slate	A colorscheme with shades of slate
 --torte	A rich and chocolatey colorscheme(+)
 --zellner	A unique and eye-catching colorscheme(--)
---vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme evening")
 --vim.cmd("colorscheme tokyonight-night")
---vim.cmd[[colorscheme solarized-osaka]]
+--vim.cmd([[colorscheme solarized-osaka]])
 --Disabling swap file system
 vim.cmd(":set noswapfile")
 --Icons
-require 'Aashish.mappings'
-
+require("Aashish.mappings")

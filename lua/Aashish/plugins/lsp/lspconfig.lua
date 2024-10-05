@@ -32,10 +32,33 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["tsserver"] = function()
-				nvim_lsp["tsserver"].setup({
+			-- Golang
+			["gopls"] = function()
+				nvim_lsp["gopls"].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+						},
+					},
+				})
+			end,
+			-- Rust
+			["rust_analyzer"] = function()
+				nvim_lsp["rust_analyzer"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					settings = {
+						["rust-analyzer"] = {
+							checkOnSave = {
+								command = "clippy",
+							},
+						},
+					},
 				})
 			end,
 			["cssls"] = function()
