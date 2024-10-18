@@ -11,8 +11,8 @@ map("i", "<C-h>", "<Left>", { desc = "Move Left" })
 map("n", "<Tab>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 --Tree file
-map("n", "<C-n>", "<Cmd>Neotree toggle<CR>", opts)
-map("n", "<C-c>", "<Cmd>Neotree focus<CR>", opts)
+map("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>", opts)
+map("n", "<C-c>", "<Cmd>NvimTreeFocus<CR>", opts)
 --Terminal toggle
 map({ "n", "t" }, "<A-h>", "<Cmd>ToggleTerm size=10 direction=horizontal <CR>", opts)
 map({ "n", "t" }, "<A-i>", "<Cmd>ToggleTerm size=5 direction=float <CR>", opts)
@@ -25,7 +25,7 @@ map({ "n", "i" }, "<C-f>", "<Cmd>Telescope grep_string<CR>", opts)
 map({ "n", "i" }, "<C-a>", "ggVG")
 
 --Comment the selected
---map({ "n", "i" }, "<C-0>", "I/")
+map({ "x" }, "<C-_>", "I//<Esc><Esc>")
 --Leetcode
 map({ "n", "i" }, "<A-q>", "<Cmd>Leet run<CR>", opts)
 map({ "n", "i" }, "<A-w>", "<Cmd>Leet submit<CR>", opts)

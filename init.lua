@@ -30,7 +30,7 @@ require("Aashish.lazy")
 --slate	A colorscheme with shades of slate
 --torte	A rich and chocolatey colorscheme(+)
 --zellner	A unique and eye-catching colorscheme(--)
-vim.cmd("colorscheme evening")
+vim.cmd("colorscheme default")
 --vim.cmd("colorscheme tokyonight-night")
 --vim.cmd([[colorscheme solarized-osaka]])
 --Disabling swap file system
