@@ -17,8 +17,8 @@ return {
 					"jsonls", -- JSON LSP
 					"pyright", -- Python LSP
 					"tailwindcss", -- Tailwind CSS LSP
-					"rust_analyzer", -- rust-analyzer
 					"gopls", --golang
+					["rust_analyzer"] = function() end,
 				},
 			})
 

@@ -32,7 +32,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			-- Golang
 			["gopls"] = function()
 				nvim_lsp["gopls"].setup({
 					on_attach = on_attach,
@@ -47,17 +46,22 @@ return {
 					},
 				})
 			end,
-			-- Rust
 			["rust_analyzer"] = function()
 				nvim_lsp["rust_analyzer"].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 					settings = {
-						["rust-analyzer"] = {
+						["rust_analyzer"] = {
 							checkOnSave = {
 								command = "clippy",
 							},
+							cargo = { allFeatures = false },
+							procMacro = { enable = false },
 						},
+					},
+					flags = {
+						allow_incremental_sync = true,
+						debounce_text_changes = 200,
 					},
 				})
 			end,
